@@ -1,0 +1,282 @@
+@import "compass/reset";
+
+$background : #18bc9c;
+$padding : 20px 0;
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    box-sizing: border-box;
+}
+.container{
+    margin: 0 auto;
+    max-width: 1240px;
+    min-width: 320px;
+    width: 100%;
+    height: 100%;
+}
+///header
+.header {
+    width:100%;
+    padding: $padding;
+    background: #2c3e50;
+    
+//    /test
+    position: fixed;
+        left: 0px;
+        top: 0px;
+       z-index: 99;
+    
+    
+    .container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+.headerFixed{
+    transition: padding .3s;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+       z-index: 99;
+    padding: 10px 0;
+}
+.header_text{
+    font-size: 1.5em;
+    line-height: 1em;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.header_nav_menu {
+    display: flex;
+    list-style-type: none;
+
+    .header_nav_menu_item {
+        overflow: hidden;
+        padding: 10px 15px;
+        cursor: pointer;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to left,
+                    rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8),
+                    rgba(255, 255, 255, 0)) no-repeat;
+            background-size: auto;
+            background-size: 70px 100%;
+            transform: skewX(-50deg);
+        }
+        &:hover::after {
+            transition: 0.2s linear;
+            position: absolute;
+            top: 100%;
+            left: 100%;
+        }
+    }
+    .header_nav_menu_item_link{
+        text-decoration: none;
+        color: #fff;
+        font-size: 1em;
+        line-height: 24px;
+        font-family: 'Roboto', sans-serif;
+    }
+}
+///main
+.main {
+    width: 100%;
+    padding: $padding;
+    background: $background;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .main_logo {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: left;
+        margin: 20px 0;
+    }
+    .main_text {
+        font-family: 'Roboto', sans-serif;
+        font-size: 3em;
+        line-height: 2em;
+        color: #fff;
+        font-weight: 700;
+        position: relative;
+        overflow: hidden;
+        &::after {
+            content: "";
+            position: relative;
+            bottom: 0;
+            content: "";
+            display: block;
+            margin: 0 auto;
+            width: 80%;
+            height: 3px;
+            background: rgb(2, 0, 36);
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 121, 69, 1) 35%, rgba(0, 212, 255, 1) 100%);
+            margin: 0 auto 20px;
+        }
+    }
+    .main_stack{
+    list-style: none;
+    }
+    .main_stack_item{
+        font: 1.3em/1.5em 'Roboto', sans-serif;
+        color: #fff;
+        position: relative;
+        &:before {
+            content: "--";
+            margin-right: 10px;
+
+        }
+    }
+}
+//My works
+.myWorks{
+    width: 100%;
+    background: #fff;
+    padding:$padding;
+}
+.myWorks_text {
+    text-align: center;
+    color: #2c3e50;
+    font: 2.5em/1.5em 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    &::after {
+        content: "";
+        position: relative;
+        bottom: 0;
+        content: "";
+        display: block;
+        margin: 0 auto;
+        width: 30%;
+        height: 3px;
+        background: #000;
+        margin: 0 auto 20px;
+    }
+}
+.myWorks_portfolio {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .myWorks_item {
+        margin: 10px;
+        flex: 0 1 360px;
+        height: 260px;
+        background: #737371;
+        border-radius: 5px;
+        position: relative;
+        .myWorks_item_mask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(24, 188, 156, .4);
+            opacity: 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .linkSvg {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        &:hover .myWorks_item_mask{
+            transition: 1s linear;
+            opacity: 1;
+        }
+    }
+}
+//aboutMe/
+.aboutMe{
+    background: $background;
+    padding: $padding;
+    .container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .myWorks_text{
+        color: #fff;
+        &:after{
+           background: #fff;
+        }
+    }
+    .aboutMe_text{
+        margin: 10px 15px;
+        font: 1em 'Roboto', sans-serif;
+        color: #fff;
+        line-height: 2em;
+        flex: 1 2 250px;
+    }
+}
+///footer
+.footer{
+    background: #2c3e50;
+    padding-top: 20px;
+    .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: flex-start;
+    }
+    .footer_heading{
+        font: 2em/1.5em 'Roboto', sans-serif;
+        color: #fff;
+    }
+    .footer_text{
+        font: 1em/2em 'Roboto', sans-serif;
+        color: #fff;
+    }
+    .footer_item_img{
+        width: 50px;
+        height: 50px;
+        background-size: cover;
+        outline: 1px solid transparent;
+        outline-offset: 0px;
+        transition: 0.6s ease;
+        &:hover {
+            outline: 1px dotted #fff;
+            outline-offset: 3px;
+
+        }
+    }
+    .footer_notes {
+        width: 100%;
+        margin-top: 10px;
+        padding: 10px 0;
+        background: #233140;
+        text-align: center;
+        .footer_notes_link {
+            color: #fff;
+            font: 1em/1em 'Roboto', sans-serif;
+        }
+    }
+}
+//link to top
+.linkToTop{
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 10%;
+    width: 50px;
+    height: 50px;
+    background: red;
+    
+}
+

@@ -1,0 +1,5 @@
+.sass-cache/
+.sass/
+*.txt
+*.css.map
+*.RB
