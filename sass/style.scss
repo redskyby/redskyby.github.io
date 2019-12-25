@@ -18,32 +18,28 @@ body {
 }
 ///header
 .header {
-    width:100%;
+    width: 100%;
     padding: $padding;
     background: #2c3e50;
-    
-//    /test
     position: fixed;
-        left: 0px;
-        top: 0px;
-       z-index: 99;
-    
-    
-    .container{
+    left: 0px;
+    top: 0px;
+    z-index: 99;
+    transition: padding .3s ease;
+    .container {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
     }
 }
-.headerFixed{
-    transition: padding .3s;
-        position: fixed;
-        left: 0px;
-        top: 0px;
-       z-index: 99;
+
+//этот клас добавляется при прокрутке к header, визуально красиво. padding меньше.
+.headerPadding {
+    transition: padding .3s ease;
     padding: 10px 0;
 }
+
 .header_text{
     font-size: 1.5em;
     line-height: 1em;
@@ -54,7 +50,6 @@ body {
 .header_nav_menu {
     display: flex;
     list-style-type: none;
-
     .header_nav_menu_item {
         overflow: hidden;
         padding: 10px 15px;
@@ -91,12 +86,12 @@ body {
 }
 ///main
 .main {
+    margin-top: 70px;
     width: 100%;
     padding: $padding;
     background: $background;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     .main_logo {
         width: 300px;
@@ -273,10 +268,35 @@ body {
     display: none;
     position: fixed;
     right: 20px;
-    bottom: 10%;
-    width: 50px;
-    height: 50px;
-    background: red;
-    
+    bottom: 5%;
+    z-index: 999;
+    cursor: pointer;
 }
 
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .arrow{
+        width: 64px;
+        height: 64px;
+        animation: animate 2s ease infinite;
+    }
+    .rocket{
+        display: none;
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@keyframes animate{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+         transform: translateY(-30%);
+    }
+    100%{
+       transform: translateY(0);
+    }
+}
