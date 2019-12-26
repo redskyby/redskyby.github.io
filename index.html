@@ -24,7 +24,8 @@
                <ul class="header_nav_menu">
                    <li class="header_nav_menu_item"><a href="#myWorks" class="header_nav_menu_item_link">Портфолио</a></li>
                    <li class="header_nav_menu_item"><a href="#aboutMe" class="header_nav_menu_item_link">Обо мне</a></li>
-                   <li class="header_nav_menu_item"><a href="#footer" class="header_nav_menu_item_link">Контакты</a></li>
+<!--                   ниже ссылка дублируется на #aboutMe , из-за того что не хватает контента ,чтобы прокрутиить футер на верх. и из-за этого получается бесконечная прокрутка .было a href="#footer" , стало a href="#aboutMe"-->
+                   <li class="header_nav_menu_item"><a href="#aboutMe" class="header_nav_menu_item_link">Контакты</a></li>
                </ul>
            </nav>
        </div>
@@ -98,7 +99,8 @@
            <p class="aboutMe_text">Коммуникабельный человек и способен самостоятельно решать возникнувшие проблемы , но вношу изменения  после согласования.</p>
        </div>
    </section>
-   <footer class="footer" id="footer">
+<!--   тут в footer другая ссылка из-за проблемы описанной выше, было id="footer , стало -->
+   <footer class="footer"  id="myWorks">
        <div class="container">
            <div class="footer_item">
                <h3 class="footer_heading">Расположение</h3>

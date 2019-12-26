@@ -64,3 +64,35 @@ function clickToTop(){
     return false;
 }
 ///menu
+
+var menu = document.querySelectorAll('.header_nav_menu_item_link');
+var timer;
+//ТУТ закоментил из-за того ,что не смог реализовать плавную прокрутку на ВСЕ элементы. проблема в том , что не хватает высоты элементов для прокрутки в топ. сделал анимацию только на первый элемент меню.
+//for(var i = 0 ; i < test.length ; i++){
+//    test[i].addEventListener('click' , clickToBottom , false);
+//}
+menu[0].addEventListener('click', clickToBottom, false);
+
+function clickToBottom(event) {
+    event.preventDefault();
+    //    нашел в ссылках - куда они ссылаются
+    var link = document.querySelector(this.getAttribute('href'));
+    //    высота header
+    var headerNav = document.querySelector('.header');
+
+    var headerNavHeight = headerNav.getBoundingClientRect().height;
+    //    отнимаю у link высоту headera
+    var heightElement = link.offsetTop - headerNavHeight;
+    //собсттвенна сама функция которая вызывается в setTimeout.доступ к переменным из-за замыкания
+    function testFunction() {
+
+        if (heightElement >= window.pageYOffset) {
+            window.scrollBy(0, 10);
+            timer = setTimeout(testFunction, 10);
+        } else {
+            clearTimeout(timer);
+        }
+    }
+    testFunction();
+}
+

@@ -42,7 +42,7 @@ body {
 
 .header_text{
     font-size: 1.5em;
-    line-height: 1em;
+    line-height: 1.2em;
     color: #fff;
     text-transform: uppercase;
     font-weight: 700;
@@ -79,8 +79,8 @@ body {
     .header_nav_menu_item_link{
         text-decoration: none;
         color: #fff;
-        font-size: 1em;
-        line-height: 24px;
+        font-size: 1.2em;
+        line-height: 1.3em;
         font-family: 'Roboto', sans-serif;
     }
 }
@@ -214,9 +214,9 @@ body {
     }
     .aboutMe_text{
         margin: 10px 15px;
-        font: 1em 'Roboto', sans-serif;
+        font: 1.3em 'Roboto', sans-serif;
         color: #fff;
-        line-height: 2em;
+        line-height: 1.4em;
         flex: 1 2 250px;
     }
 }
@@ -224,18 +224,18 @@ body {
 .footer{
     background: #2c3e50;
     padding-top: 20px;
-    .container{
+    .container {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
-        align-content: flex-start;
+        justify-content: space-between;
+
     }
     .footer_heading{
         font: 2em/1.5em 'Roboto', sans-serif;
         color: #fff;
     }
     .footer_text{
-        font: 1em/2em 'Roboto', sans-serif;
+        font: 1.3em/1.4em 'Roboto', sans-serif;
         color: #fff;
     }
     .footer_item_img{
@@ -259,7 +259,7 @@ body {
         text-align: center;
         .footer_notes_link {
             color: #fff;
-            font: 1em/1em 'Roboto', sans-serif;
+            font: 1.2em/1.3em 'Roboto', sans-serif;
         }
     }
 }
