@@ -1,3 +1,149 @@
-@media screen and (min-width: 1240px){
-    
+@media screen and (min-width: 992px) and (max-width: 1239px) {
+    .linkToTop {
+        display: none;
+        position: fixed;
+        right: 0%;
+        bottom: 0%;
+        z-index: 999;
+        cursor: pointer;
+    }
+
+    .footer .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .myWorks_portfolio {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .linkToTop {
+        display: none;
+        position: fixed;
+        right: 0%;
+        bottom: 0%;
+        z-index: 999;
+        cursor: pointer;
+    }
+
+    .footer .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .myWorks_portfolio {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .aboutMe .container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap
+    }
+
+    .aboutMe .aboutMe_text {
+        margin: 10px 15px;
+        font: 1.3em 'Roboto', sans-serif;
+        line-height: normal;
+        color: #fff;
+        line-height: 1.4em;
+        flex: 0 2 auto;
+    }
+}
+
+@media screen and (max-width: 767px) {
+   .linkToTop {
+        display: none;
+        position: fixed;
+        right: 0%;
+        bottom: 0%;
+        z-index: 999;
+        cursor: pointer;
+    }
+
+    .footer .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .myWorks_portfolio {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .aboutMe .container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap
+    }
+
+    .aboutMe .aboutMe_text {
+        margin: 10px 15px;
+        font: 1.3em 'Roboto', sans-serif;
+        line-height: normal;
+        color: #fff;
+        line-height: 1.4em;
+        flex: 0 2 auto;
+    }
+}
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 13px ;
+        line-height: 20px;
+    }
+    .linkToTop {
+        display: none;
+        position: fixed;
+        right: 0%;
+        bottom: 0%;
+        z-index: 999;
+        cursor: pointer;
+    }
+
+    .footer .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .myWorks_portfolio {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .aboutMe .container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap
+    }
+
+    .aboutMe .aboutMe_text {
+        margin: 10px 15px;
+        font: 1.3em 'Roboto', sans-serif;
+        line-height: normal;
+        color: #fff;
+        line-height: 1.4em;
+        flex: 0 2 auto;
+    }
+    .footer_item{
+        text-align: center
+    }
+    .main .main_text {
+        text-align: center;
+    }
 }
